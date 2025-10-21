@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoptiFied - Marketplace Adopsi Barang Bermakna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+    <!-- Navigation -->
+    <nav class="nav-glass fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold text-stone-800">Adopti<span class="text-amber-600">Fied</span></h1>
+                <p class="text-xs text-stone-500">Cerita yang Berlanjut</p>
+            </div>
+            <button id="menuToggle" class="md:hidden text-stone-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul id="navMenu" class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li><a href="products.html" class="nav-link">Katalog Cerita</a></li>
+                <li><a href="contact.html" class="nav-link">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
+            <div class="hero-content">
+                <span class="inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-6">
+                    Bukan Sekadar Jual Beli
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Setiap Barang<br>
+                    <span class="text-amber-600">Punya Cerita</span>
+                </h2>
+                <p class="text-xl text-stone-600 mb-8 max-w-2xl mx-auto">
+                    AdoptiFied adalah tempat barang menemukan pemilik baru yang menghargai kisah di baliknya. 
+                    Bukan membeli — tapi mengadopsi memori dan melanjutkan cerita.
+                </p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="products.html" class="btn-primary">
+                        Jelajahi Cerita
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary">
+                        Cara Kerja
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Cerita Pilihan</h3>
+                <p class="text-stone-600">Barang-barang yang menunggu pemilik baru untuk melanjutkan kisahnya</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="story-card">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-amber-200 to-orange-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            📷
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Elektronik</span>
+                        <h4 class="card-title">Kamera Polaroid Kenangan</h4>
+                        <p class="card-story">
+                            "Kamera ini menemani perjalanan pertamaku keliling Eropa tahun 2019. 
+                            Setiap klik mencetak kenangan langsung di tangan."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 850.000</span>
+                            <a href="products.html" class="card-link">
+                                Adopsi →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="story-card">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-emerald-200 to-teal-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            📚
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Buku</span>
+                        <h4 class="card-title">Koleksi Novel Filosofi</h4>
+                        <p class="card-story">
+                            "10 novel dengan margin penuh catatan dan highlighter. Pernah menemani masa-masa 
+                            kuliah yang penuh pertanyaan eksistensial."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 320.000</span>
+                            <a href="products.html" class="card-link">
+                                Adopsi →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="story-card">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-rose-200 to-pink-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            🎸
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Musik</span>
+                        <h4 class="card-title">Gitar Akustik First Love</h4>
+                        <p class="card-story">
+                            "Gitar pertamaku yang dibeli dari hasil kerja paruh waktu. Sudah dimainkan 
+                            di 15 panggung kecil dan puluhan sesi nongkrong."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 1.200.000</span>
+                            <a href="products.html" class="card-link">
+                                Adopsi →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-stone-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Cara Kerja AdoptiFied</h3>
+                <p class="text-stone-600">Proses sederhana untuk memberikan barang kehidupan baru</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center process-step">
+                    <div class="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">
+                        1
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Jelajahi Cerita</h4>
+                    <p class="text-stone-600">
+                        Telusuri katalog barang yang menunggu pemilik baru. Baca cerita di balik setiap item.
+                    </p>
+                </div>
+
+                <div class="text-center process-step">
+                    <div class="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">
+                        2
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Adopsi dengan Harga</h4>
+                    <p class="text-stone-600">
+                        Adopsi barang dengan harga simbolis sebagai bentuk tanggung jawab dan penghargaan.
+                    </p>
+                </div>
+
+                <div class="text-center process-step">
+                    <div class="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">
+                        3
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Lanjutkan Kisahnya</h4>
+                    <p class="text-stone-600">
+                        Terima barang beserta ceritanya, dan buat kenangan baru untuk diteruskan suatu hari nanti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-amber-600 to-orange-600 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                Siap Melanjutkan Sebuah Cerita?
+            </h3>
+            <p class="text-xl mb-8 opacity-90">
+                Jelajahi katalog kami dan temukan barang yang resonan dengan ceritamu
+            </p>
+            <a href="products.html" class="inline-flex items-center px-8 py-4 bg-white text-amber-600 rounded-full font-semibold text-lg hover:bg-stone-50 transition-all hover:scale-105">
+                Mulai Menjelajah
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-300 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white text-xl font-bold mb-4">AdoptiFied</h4>
+                    <p class="text-sm">
+                        Platform adopsi barang bermakna. Setiap barang punya cerita, 
+                        dan kamu bisa menjadi bagian dari kelanjutannya.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Navigasi</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a></li>
+                        <li><a href="products.html" class="hover:text-amber-400 transition-colors">Katalog Cerita</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Kontak</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li>📧 hello@adoptified.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Surabaya, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-700 pt-8 text-center text-sm">
+                <p>&copy; 2024 AdoptiFied. Dibuat dengan ❤️ untuk UTS Pemrograman Berbasis Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

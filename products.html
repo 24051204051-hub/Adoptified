@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Cerita - AdoptiFied</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+    <!-- Navigation -->
+    <nav class="nav-glass fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold text-stone-800">Adopti<span class="text-amber-600">Fied</span></h1>
+                <p class="text-xs text-stone-500">Cerita yang Berlanjut</p>
+            </div>
+            <button id="menuToggle" class="md:hidden text-stone-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul id="navMenu" class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="products.html" class="nav-link active">Katalog Cerita</a></li>
+                <li><a href="contact.html" class="nav-link">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Katalog Cerita</h2>
+            <p class="text-xl text-stone-600">Temukan barang dengan kisah yang menyentuh hatimu</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white sticky top-20 z-40 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-wrap gap-3">
+                <button class="filter-btn active" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="elektronik">Elektronik</button>
+                <button class="filter-btn" data-category="buku">Buku & Literatur</button>
+                <button class="filter-btn" data-category="musik">Musik</button>
+                <button class="filter-btn" data-category="fashion">Fashion</button>
+                <button class="filter-btn" data-category="dekorasi">Dekorasi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div id="productsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="story-card product-item" data-category="elektronik">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-amber-200 to-orange-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            📷
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Elektronik</span>
+                        <h4 class="card-title">Kamera Polaroid Kenangan</h4>
+                        <p class="card-story">
+                            "Kamera ini menemani perjalanan pertamaku keliling Eropa tahun 2019. 
+                            Setiap klik mencetak kenangan langsung di tangan. Sayang, sekarang 
+                            sudah lebih suka digital photography."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 850.000</span>
+                            <button class="card-link adopt-btn" data-product="Kamera Polaroid Kenangan">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="story-card product-item" data-category="buku">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-emerald-200 to-teal-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            📚
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Buku</span>
+                        <h4 class="card-title">Koleksi Novel Filosofi</h4>
+                        <p class="card-story">
+                            "10 novel dengan margin penuh catatan dan highlighter. Pernah menemani 
+                            masa-masa kuliah yang penuh pertanyaan eksistensial. Mungkin kamu juga 
+                            butuh teman seperti mereka."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 320.000</span>
+                            <button class="card-link adopt-btn" data-product="Koleksi Novel Filosofi">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="story-card product-item" data-category="musik">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-rose-200 to-pink-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            🎸
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Musik</span>
+                        <h4 class="card-title">Gitar Akustik First Love</h4>
+                        <p class="card-story">
+                            "Gitar pertamaku yang dibeli dari hasil kerja paruh waktu. Sudah dimainkan 
+                            di 15 panggung kecil dan puluhan sesi nongkrong. Kondisi masih mantap, 
+                            siap untuk lagu-lagu barumu."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 1.200.000</span>
+                            <button class="card-link adopt-btn" data-product="Gitar Akustik First Love">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="story-card product-item" data-category="elektronik">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-blue-200 to-indigo-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            🎧
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Elektronik</span>
+                        <h4 class="card-title">Headphone Studio Klasik</h4>
+                        <p class="card-story">
+                            "Teman setiaku saat ngerjain skripsi hingga larut malam. Suara bass-nya 
+                            masih mantap, cuma sekarang aku lebih suka earbuds yang portable."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 450.000</span>
+                            <button class="card-link adopt-btn" data-product="Headphone Studio Klasik">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="story-card product-item" data-category="fashion">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-200 to-violet-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            🧥
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Fashion</span>
+                        <h4 class="card-title">Jaket Denim Vintage 90s</h4>
+                        <p class="card-story">
+                            "Jaket yang kupake saat lulus SMA. Penuh patch band favorit dari 
+                            konser-konser yang pernah kudatangi. Semoga kamu juga bikin kenangan 
+                            baru dengannya."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 280.000</span>
+                            <button class="card-link adopt-btn" data-product="Jaket Denim Vintage 90s">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="story-card product-item" data-category="dekorasi">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-yellow-200 to-amber-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            🕯️
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Dekorasi</span>
+                        <h4 class="card-title">Lampu Gantung Bohemian</h4>
+                        <p class="card-story">
+                            "Lampu yang menerangi kamar kos pertamaku. Saksi bisu begadang, 
+                            nangis, dan tertawa bareng teman-teman. Sekarang aku pindah dan 
+                            gaya kamarku berubah."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 195.000</span>
+                            <button class="card-link adopt-btn" data-product="Lampu Gantung Bohemian">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="story-card product-item" data-category="buku">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-red-200 to-rose-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            📖
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Buku</span>
+                        <h4 class="card-title">Jurnal Catatan Perjalanan</h4>
+                        <p class="card-story">
+                            "Jurnal kosong yang kubeli untuk merekam petualangan, tapi malah kepenuhan 
+                            coretan random dan doodles. Masih banyak halaman kosong untuk ceritamu!"
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 85.000</span>
+                            <button class="card-link adopt-btn" data-product="Jurnal Catatan Perjalanan">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="story-card product-item" data-category="musik">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-cyan-200 to-blue-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            🎹
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Musik</span>
+                        <h4 class="card-title">Keyboard MIDI Controller</h4>
+                        <p class="card-story">
+                            "Keyboard yang kupakai untuk bikin beats amatir di kamar. Pernah 
+                            bikin 2 lagu yang dimainkan di radio kampus. Sekarang fokus ke DJ-ing."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 680.000</span>
+                            <button class="card-link adopt-btn" data-product="Keyboard MIDI Controller">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="story-card product-item" data-category="fashion">
+                    <div class="card-image">
+                        <div class="w-full h-64 bg-gradient-to-br from-pink-200 to-red-300 rounded-t-2xl flex items-center justify-center text-6xl">
+                            👜
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Fashion</span>
+                        <h4 class="card-title">Tas Kanvas Travel Buddy</h4>
+                        <p class="card-story">
+                            "Tas yang menemani backpacking ke 7 kota dalam 2 tahun. Penuh sticker 
+                            dari berbagai tempat. Kuat, awet, dan siap untuk petualangan berikutnya."
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">Rp 175.000</span>
+                            <button class="card-link adopt-btn" data-product="Tas Kanvas Travel Buddy">
+                                Adopsi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adoption Modal -->
+    <div id="adoptionModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 class="text-2xl font-bold mb-4">Adopsi Barang</h3>
+            <p class="text-stone-600 mb-6" id="modalProductName">Nama Produk</p>
+            <p class="text-sm text-stone-500 mb-6">
+                Untuk melanjutkan adopsi, silakan isi form atau langsung hubungi kami melalui halaman kontak.
+            </p>
+            <div class="flex gap-4">
+                <a href="contact.html" class="btn-primary flex-1 text-center">
+                    Isi Form Adopsi
+                </a>
+                <button id="continueBtn" class="btn-secondary flex-1">
+                    Lanjut Jelajah
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-300 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white text-xl font-bold mb-4">AdoptiFied</h4>
+                    <p class="text-sm">
+                        Platform adopsi barang bermakna. Setiap barang punya cerita, 
+                        dan kamu bisa menjadi bagian dari kelanjutannya.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Navigasi</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a></li>
+                        <li><a href="products.html" class="hover:text-amber-400 transition-colors">Katalog Cerita</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Kontak</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li>📧 hello@adoptified.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Surabaya, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-700 pt-8 text-center text-sm">
+                <p>&copy; 2024 AdoptiFied. Dibuat dengan ❤️ untuk UTS Pemrograman Berbasis Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
